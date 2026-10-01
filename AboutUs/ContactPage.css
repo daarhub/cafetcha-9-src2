@@ -1,0 +1,186 @@
+/* /contact — Contact Us page (guests and customers). Green hero keeps the
+   design language of the other pages; the form card sits below it. */
+.contact-page {
+  min-height: 100vh;
+  background: #f7f1e3;
+}
+
+.contact-hero {
+  padding: 128px 5% 54px;
+
+  color: #fff;
+  background: linear-gradient(150deg, #1e4140, #285451 55%, #183b39);
+  text-align: center;
+}
+
+.contact-crumb {
+  margin: 0 0 12px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.contact-hero h1 {
+  margin: 0 0 12px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 5vw, 44px);
+  letter-spacing: 1.5px;
+}
+
+.contact-hero p {
+  margin: 0 auto;
+  max-width: 560px;
+
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.88;
+}
+
+.contact-body {
+  max-width: 720px;
+  margin: 0 auto;
+
+  padding: 36px 5% 80px;
+}
+
+.contact-card {
+  display: grid;
+  gap: 14px;
+
+  padding: 26px;
+  border: 1.5px solid #e9dcc6;
+  border-radius: 16px;
+
+  background: #fffdf7;
+  box-shadow: 0 12px 30px rgba(23, 50, 48, 0.08);
+}
+
+.contact-card h2 {
+  margin: 0;
+
+  color: #234947;
+  font-size: 20px;
+}
+
+.contact-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-card label {
+  display: grid;
+  gap: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #54706c;
+}
+
+.contact-card input,
+.contact-card select,
+.contact-card textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 11px 12px;
+
+  border: 1.5px solid #e0d3b8;
+  border-radius: 10px;
+
+  color: #234947;
+  background: #fff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-card input:focus,
+.contact-card select:focus,
+.contact-card textarea:focus {
+  outline: none;
+  border-color: #285451;
+}
+
+.contact-card textarea {
+  resize: vertical;
+}
+
+.contact-error {
+  margin: 0;
+
+  color: #b3261e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  justify-self: start;
+  padding: 13px 24px;
+  border: 0;
+  border-radius: 999px;
+
+  color: #fff;
+  background: #285451;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.contact-submit:hover {
+  background: #183b39;
+}
+
+.contact-note {
+  margin: 0;
+
+  color: #95866f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Success screen */
+.contact-sent {
+  justify-items: center;
+  gap: 10px;
+
+  padding: 44px 26px;
+  text-align: center;
+}
+
+.contact-sent > svg {
+  color: #2e8b57;
+}
+
+.contact-sent h2 {
+  margin: 0;
+}
+
+.contact-sent p {
+  margin: 0;
+  max-width: 420px;
+
+  color: #54706c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 560px) {
+  .contact-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

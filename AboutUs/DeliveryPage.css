@@ -1,0 +1,285 @@
+.delivery-page {
+  min-height: 100vh;
+  background: #f8f1e9;
+  color: #234947;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.delivery-hero {
+  color: #fff;
+  padding: 128px max(6%, calc((100% - 1220px) / 2)) 64px;
+  background: linear-gradient(135deg, #1b4a48, #2e6460);
+}
+
+.delivery-crumb {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delivery-hero h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.delivery-hero > p:not(.delivery-crumb) {
+  max-width: 560px;
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================
+   STATS BAR
+========================= */
+
+.delivery-stats {
+  width: min(1220px, 92%);
+  margin: -38px auto 0;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 20px 24px;
+  border: 1px solid #d7b996;
+  border-radius: 16px;
+  background: #fffaf4;
+  box-shadow: 0 14px 30px rgba(72, 49, 24, 0.12);
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 8px;
+  text-align: center;
+}
+
+.stat-card svg {
+  color: #285451;
+  margin-bottom: 3px;
+}
+
+.stat-card strong {
+  color: #234947;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.stat-card span {
+  color: #6a7f7b;
+  font-size: 11px;
+}
+
+/* =========================
+   BODY
+========================= */
+
+.delivery-body {
+  width: min(1220px, 100%);
+  margin: 0 auto;
+  padding: 30px 18px 70px;
+  display: grid;
+  gap: 26px;
+}
+
+.delivery-card {
+  padding: 26px 28px;
+  border: 1px solid #d7b996;
+  border-radius: 14px;
+  background: #fffaf4;
+  box-shadow: 0 8px 20px rgba(72, 49, 24, 0.06);
+}
+
+.delivery-card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.delivery-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #fff;
+  background: #285451;
+}
+
+.delivery-card-head h2 {
+  margin: 0 0 2px;
+  font-size: 20px;
+}
+
+.delivery-card-head p {
+  margin: 0;
+  color: #6a7f7b;
+  font-size: 12px;
+}
+
+/* STEPS */
+
+.delivery-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.delivery-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.step-badge {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #d8b77d;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.delivery-steps p {
+  margin: 1px 0 0;
+  color: #34514f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.delivery-steps strong {
+  color: #234947;
+}
+
+.delivery-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f0ead9;
+  color: #234947;
+  font-size: 12.5px;
+}
+
+/* PAYMENTS */
+
+.pay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.pay-method {
+  display: block;
+  padding: 18px 16px;
+  border: 1px solid #e2d3b8;
+  border-radius: 12px;
+  background: #fff;
+  color: #234947;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pay-method:hover {
+  border-color: #285451;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(72, 49, 24, 0.1);
+}
+
+.pay-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  color: #fff;
+  background: #285451;
+}
+
+.pay-method h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+
+.pay-method p {
+  margin: 0;
+  color: #55716d;
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+
+/* FEES */
+
+.fee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 20px;
+}
+
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #f4ecdc;
+  font-size: 12px;
+}
+
+.fee-barangay {
+  color: #234947;
+  font-weight: 700;
+}
+
+.fee-price {
+  color: #8a6d2f;
+  font-weight: 800;
+}
+
+.fee-free {
+  color: #1f6f4a;
+  font-weight: 800;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 720px) {
+  .delivery-body {
+    padding: 26px 16px 48px;
+  }
+
+  .delivery-card {
+    padding: 20px 16px;
+  }
+
+  .delivery-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 16px 14px;
+    margin-top: -28px;
+  }
+
+  .pay-grid,
+  .fee-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,710 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.our-story-hero {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 64px 24px;
+  padding-top: 144px;
+
+  background: linear-gradient(135deg, #1b4a48, #2e6460);
+
+  text-align: center;
+}
+
+.our-story-hero-breadcrumb {
+  margin: 0 0 16px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 14px;
+}
+
+.our-story-hero-title {
+  margin: 0 0 24px;
+
+  color: #d9b98a;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(30px, 4vw, 48px);
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.our-story-hero-subtitle {
+  width: 640px;
+
+  max-width: 100%;
+
+  margin: 0 auto 8px;
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+
+.our-story-hero-hint {
+  margin: 0;
+
+  color: #d9b98a;
+
+  font-size: 13px;
+}
+
+/* =========================
+   PHOTO GRID SECTION
+========================= */
+
+.photo-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 64px 24px;
+
+  background: #faf4ea;
+}
+
+/* =========================
+   PHOTO GRID
+========================= */
+
+.photo-grid {
+  width: min(94vw, 1152px);
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+.photo-column {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* =========================
+   PHOTO TILE
+========================= */
+
+.photo-tile {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.photo-tile-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.photo-tile:hover .photo-tile-image {
+  transform: scale(1.05);
+}
+
+/* =========================
+   PER-PHOTO HEIGHTS
+========================= */
+
+.photo-tile-our-story {
+  height: 260px;
+}
+
+.photo-tile-what-makes-us-unique {
+  height: 216px;
+}
+
+.photo-tile-center {
+  height: 335px;
+}
+
+.photo-tile-our-ambiance {
+  height: 319px;
+}
+
+.photo-tile-our-mission {
+  height: 341px;
+}
+
+.photo-tile-our-vision {
+  height: 216px;
+}
+
+/* =========================
+   PHOTO TILE OVERLAY
+========================= */
+
+.photo-tile-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+}
+
+.photo-tile-has-caption:hover .photo-tile-overlay {
+  opacity: 1;
+}
+
+.photo-tile-title {
+  margin: 0 0 4px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.photo-tile-text {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   TAGLINE ROW
+
+   "MORE THAN JUST A CAFÉ"
+========================= */
+
+.tagline-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+}
+
+.tagline-row-heading {
+  flex: 1;
+
+  min-width: 0;
+
+  margin: 0;
+
+  color: #0f2e2b;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+.tagline-row-underline {
+  width: 56px;
+  height: 4px;
+
+  margin-top: 10px;
+
+  background: #d9b98a;
+}
+
+.tagline-row-logo {
+  width: 120px;
+  height: 120px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+
+  transform: scale(2.6) translateX(10px);
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.tagline-row--stacked {
+  display: none;
+}
+
+/* =========================
+   STORY TECH SECTION
+========================= */
+
+.story-tech-section {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 64px 24px;
+
+  background:  #294f4d;
+
+  text-align: center;
+}
+
+.story-tech-eyebrow {
+  margin: 0 0 12px;
+
+  color: #d9b98a;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.story-tech-title {
+  margin: 0 0 16px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: clamp(26px, 3.2vw, 36px);
+
+  font-weight: 800;
+}
+
+.story-tech-subtitle {
+  width: 640px;
+
+  max-width: 100%;
+
+  margin: 0 auto 40px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   3 CARDS SIDE BY SIDE
+========================= */
+
+.story-tech-grid {
+  width: min(94vw, 1152px);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+/* =========================
+   STORY TECH CARD
+========================= */
+
+.story-tech-card {
+  box-sizing: border-box;
+
+  padding: 28px 24px;
+
+  border: 1px solid rgba(217, 185, 138, 0.764);
+  border-radius: 12px;
+
+  background: #254544;
+
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.story-tech-card:hover {
+  transform: translateY(-5px);
+  background: rgba(41, 79, 77, 0.88);
+}
+
+/* =========================
+   ICON BOX
+========================= */
+
+.story-tech-icon-wrap {
+  width: 56px;
+  height: 56px;
+
+  margin-bottom: 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: rgba(217, 185, 138, 0.08);
+}
+
+.story-tech-icon {
+  width: 55px;
+  height: 55px;
+
+  object-fit: contain;
+}
+
+.story-tech-card-title {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.story-tech-card-description {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   TEAM SECTION
+========================= */
+
+.team-section {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 64px 24px;
+  background: #faf4ea;
+  text-align: center;
+}
+
+.team-eyebrow {
+  margin: 0 0 12px;
+  color: #294f4d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.team-title {
+  margin: 0 0 16px;
+  color: #0f2e2b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 800;
+}
+
+.team-subtitle {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto 40px;
+  color: rgba(15, 46, 43, 0.7);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.team-grid {
+  width: min(94vw, 1152px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.team-card {
+  perspective: 1200px;
+  border-radius: 12px;
+}
+
+.team-card-flip {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 220px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(15, 46, 43, 0.12);
+}
+
+.team-card:hover .team-card-flip {
+  transform: rotateY(180deg);
+}
+
+.team-card-face {
+  position: absolute;
+  inset: 0;
+
+  box-sizing: border-box;
+  padding: 28px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid rgba(217, 185, 138, 0.5);
+  border-radius: 12px;
+
+  backface-visibility: hidden;
+}
+
+.team-card-face--front {
+  position: relative;
+  background: #ffffff;
+}
+
+.team-card-face--back {
+  background: #294f4d;
+  transform: rotateY(180deg);
+}
+
+.team-card-photo-wrap {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #d9b98a;
+}
+
+.team-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-card-name {
+  margin: 0 0 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.team-card-face--front .team-card-name {
+  color: #0f2e2b;
+}
+
+.team-card-face--back .team-card-name {
+  color: #ffffff;
+}
+
+.team-card-role {
+  margin: 0;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.team-card-face--front .team-card-role {
+  color: #294f4d;
+}
+
+.team-card-role--ops {
+  color: #d9b98a;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.team-card-ops-label {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .our-story-hero {
+    padding: 50px 20px;
+  }
+
+  .photo-section {
+    padding: 50px 20px;
+  }
+
+  .photo-tile-our-story {
+    height: 220px;
+  }
+
+  .photo-tile-what-makes-us-unique {
+    height: 190px;
+  }
+
+  .photo-tile-center {
+    height: 290px;
+  }
+
+  .photo-tile-our-ambiance {
+    height: 270px;
+  }
+
+  .photo-tile-our-mission {
+    height: 295px;
+  }
+
+  .photo-tile-our-vision {
+    height: 190px;
+  }
+
+  .story-tech-section {
+    padding: 50px 20px;
+  }
+
+  .story-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .our-story-hero {
+    padding: 40px 16px;
+  }
+
+  .our-story-hero-title {
+    font-size: 28px;
+  }
+
+  .our-story-hero-subtitle {
+    font-size: 14px;
+  }
+
+  .photo-section {
+    padding: 40px 16px;
+  }
+
+  .photo-grid {
+    flex-direction: column;
+  }
+
+  .photo-tile-our-story,
+  .photo-tile-what-makes-us-unique,
+  .photo-tile-center,
+  .photo-tile-our-ambiance,
+  .photo-tile-our-mission,
+  .photo-tile-our-vision {
+    height: 260px;
+  }
+
+  .tagline-row--inline {
+    display: none;
+  }
+
+  .tagline-row--stacked {
+    display: flex;
+
+    margin-top: 8px;
+  }
+
+  .tagline-row-heading {
+    font-size: 24px;
+  }
+
+  .story-tech-section {
+    padding: 40px 16px;
+  }
+
+  .story-tech-title {
+    font-size: 24px;
+  }
+
+  .story-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+  .our-story-hero-title {
+    font-size: 24px;
+  }
+
+  .photo-tile-our-story,
+  .photo-tile-what-makes-us-unique,
+  .photo-tile-center,
+  .photo-tile-our-ambiance,
+  .photo-tile-our-mission,
+  .photo-tile-our-vision {
+    height: 220px;
+  }
+
+  .tagline-row-heading {
+    font-size: 20px;
+  }
+
+  .story-tech-card {
+    padding: 18px;
+  }
+}

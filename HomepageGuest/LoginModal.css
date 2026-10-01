@@ -1,0 +1,77 @@
+.login-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(9, 30, 29, 0.68);
+  animation: login-modal-fade 0.18s ease;
+}
+
+@keyframes login-modal-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.login-modal {
+  position: relative;
+  width: min(390px, 100%);
+  padding: 34px;
+  border-radius: 14px;
+  color: #234947;
+  background: #fffaf4;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: login-modal-pop 0.2s ease;
+}
+
+@keyframes login-modal-pop {
+  from {
+    opacity: 0.6;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-modal h2 {
+  margin: 0 0 10px;
+}
+
+.login-modal p {
+  margin: 0 0 22px;
+  color: #54706c;
+  line-height: 1.5;
+}
+
+.login-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 0;
+  background: transparent;
+  color: #315654;
+  cursor: pointer;
+}
+
+.login-modal-action {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 7px;
+  color: #fff;
+  background: #285451;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-modal-action:hover {
+  background: #183b39;
+}

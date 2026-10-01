@@ -1,0 +1,41 @@
+/* =========================
+   REVIEWS + FEATURES
+   ONE CONTINUOUS BACKGROUND
+========================= */
+
+.reviews-features-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =========================
+   ONE BACKGROUND
+========================= */
+
+.reviews-features-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =========================
+   KEEP CONTENT ABOVE IMAGE
+========================= */
+
+.reviews-features-wrapper .reviews,
+.reviews-features-wrapper .features {
+  position: relative;
+  z-index: 2;
+
+  background: transparent;
+}

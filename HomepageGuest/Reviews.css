@@ -1,0 +1,689 @@
+/* =====================================================
+   REVIEWS SECTION
+===================================================== */
+
+.reviews {
+  position: relative;
+
+  width: 100%;
+  min-height: 50vh;
+  padding-bottom: 32px;
+  min-height: 430px;
+
+  overflow: hidden;
+
+  background: #193b39;
+}
+
+/* =====================================================
+   DECORATIVE COFFEE BEANS
+===================================================== */
+
+.reviews-beans {
+  position: absolute;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  width: 480px;
+  height: auto;
+
+  opacity: 0.5;
+}
+
+.reviews-beans-left {
+  top: 15px;
+  left: -10px;
+
+  transform: rotate(-8deg);
+}
+
+.reviews-beans-right {
+  top: 50px;
+  right: -40px;
+
+  transform: rotate(60deg) scaleX(-1);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.reviews-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  min-height: 50vh;
+
+  box-sizing: border-box;
+
+  padding: 38px 6% 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.reviews-heading {
+  width: 100%;
+
+  text-align: center;
+
+  margin-bottom: 23px;
+}
+
+/* SMALL LABEL */
+
+.reviews-eyebrow {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #d8b77d;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  opacity: 0.95;
+}
+
+/* TITLE ROW */
+
+.reviews-title-row {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 14px;
+}
+
+/* SIDE LINES */
+
+.heading-line {
+  width: 70px;
+
+  height: 1px;
+
+  background: linear-gradient(90deg, transparent, rgba(216, 183, 125, 0.85));
+}
+
+.heading-line:last-child {
+  background: linear-gradient(90deg, rgba(216, 183, 125, 0.85), transparent);
+}
+
+/* MAIN TITLE */
+
+.reviews-heading h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  font-size: clamp(28px, 2.8vw, 38px);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -0.5px;
+
+  white-space: nowrap;
+}
+
+/* SUBTITLE */
+
+.reviews-heading p {
+  margin: 6px 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: clamp(14px, 1.3vw, 17px);
+
+  font-style: italic;
+
+  font-weight: 500;
+}
+
+/* =====================================================
+   REVIEW LIST
+===================================================== */
+
+.reviews-list {
+  width: min(100%, 1080px);
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 26px;
+
+  align-items: stretch;
+}
+
+/* Empty state when there are no store reviews yet */
+.reviews-empty {
+  margin: 0;
+  padding: 26px 20px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(216, 183, 125, 0.4);
+  border-radius: 12px;
+  width: min(100%, 560px);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* =====================================================
+   REVIEW CARD
+===================================================== */
+
+.review-card {
+  position: relative;
+
+  min-height: 145px;
+
+  padding: 17px 20px 16px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(216, 183, 125, 0.12);
+
+  border-radius: 11px;
+
+  background:  #294f4d;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* TOP GOLD LINE */
+
+.review-card-accent {
+  position: absolute;
+
+  top: 0;
+  left: 18px;
+
+  width: 48px;
+  height: 2px;
+
+  background: #d8b77d;
+
+  border-radius: 0 0 4px 4px;
+}
+
+/* CARD HOVER */
+
+.review-card:hover {
+  transform: translateY(-7px);
+
+  border-color: rgba(216, 183, 125, 0.65);
+
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================================
+   QUOTE ICON
+===================================================== */
+
+.review-quote {
+  position: absolute;
+
+  right: 16px;
+  top: 15px;
+
+  color: rgba(255, 255, 255, 0.13);
+}
+
+/* =====================================================
+   USER
+===================================================== */
+
+.review-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+/* AVATAR */
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(145deg, #e2e6ea, #cbd2d8);
+
+  color: #7c8790;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.14);
+}
+
+/* USER INFORMATION */
+
+.review-user-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+/* NAME */
+
+.review-name {
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+/* VERIFIED LABEL */
+
+.review-label {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.4px;
+
+  text-transform: uppercase;
+}
+
+/* =====================================================
+   STARS
+===================================================== */
+
+.review-stars {
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  margin-bottom: 8px;
+
+  color: #ffd447;
+}
+
+/* =====================================================
+   REVIEW TEXT
+===================================================== */
+
+.review-text {
+  max-width: 90%;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+
+  font-weight: 500;
+}
+
+/* =====================================================
+   BUTTON AREA
+===================================================== */
+
+.review-buttons {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 23px;
+}
+
+/* =====================================================
+   BUTTON BASE
+===================================================== */
+
+.review-button {
+  height: 39px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  border-radius: 7px;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* PRIMARY */
+
+.review-button-primary {
+  min-width: 145px;
+
+  border: 1px solid #d8b77d;
+
+  background: #102f2d;
+
+  color: #ffffff;
+}
+
+.review-button-primary span {
+  font-size: 15px;
+
+  transition: transform 0.25s ease;
+}
+
+.review-button-primary:hover {
+  background: #d8b77d;
+
+  color: #173a38;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review-button-primary:hover span {
+  transform: translateX(3px);
+}
+
+/* SECONDARY */
+
+.review-button-secondary {
+  min-width: 130px;
+
+  border: 1px solid rgba(216, 183, 125, 0.75);
+
+  background: transparent;
+
+  color: #ffffff;
+}
+
+.review-button-secondary:hover {
+  background: rgba(216, 183, 125, 0.15);
+
+  border-color: #d8b77d;
+
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  .reviews-content {
+    padding: 34px 5% 25px;
+  }
+
+  .reviews-heading {
+    margin-bottom: 20px;
+  }
+
+  .reviews-eyebrow {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .reviews-heading h2 {
+    font-size: 28px;
+  }
+
+  .reviews-heading p {
+    font-size: 14px;
+  }
+
+  .heading-line {
+    width: 45px;
+  }
+
+  .reviews-list {
+    gap: 17px;
+  }
+
+  .review-card {
+    min-height: 135px;
+
+    padding: 15px;
+  }
+
+  .review-avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .review-avatar svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .review-name {
+    font-size: 11px;
+  }
+
+  .review-label {
+    font-size: 7px;
+  }
+
+  .review-stars svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .review-text {
+    font-size: 11px;
+  }
+
+  .review-buttons {
+    margin-top: 18px;
+  }
+
+  .review-button {
+    height: 36px;
+
+    font-size: 10px;
+  }
+
+  /* COFFEE BEANS */
+  .reviews-beans {
+    width: 310px;
+  }
+
+  .reviews-beans-left {
+    top: 70px;
+    left: -6px;
+  }
+
+  .reviews-beans-right {
+    top: 100px;
+    right: -26px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+  .reviews {
+    height: 50vh;
+
+    min-height: 500px;
+  }
+
+  .reviews-content {
+    padding: 28px 5% 22px;
+  }
+
+  .reviews-eyebrow {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .reviews-title-row {
+    gap: 8px;
+  }
+
+  .reviews-heading h2 {
+    font-size: 21px;
+  }
+
+  .reviews-heading p {
+    font-size: 12px;
+  }
+
+  .heading-line {
+    width: 25px;
+  }
+
+  .reviews-list {
+    width: min(100%, 390px);
+
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .review-card {
+    min-height: 88px;
+
+    padding: 10px 13px;
+  }
+
+  .review-user {
+    margin-bottom: 4px;
+  }
+
+  .review-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .review-avatar svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .review-name {
+    font-size: 10px;
+  }
+
+  .review-label {
+    font-size: 6px;
+  }
+
+  .review-stars {
+    margin-bottom: 3px;
+  }
+
+  .review-stars svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .review-text {
+    font-size: 9px;
+  }
+
+  .review-quote {
+    width: 19px;
+    height: 19px;
+  }
+
+  .review-buttons {
+    margin-top: 13px;
+
+    gap: 7px;
+  }
+
+  .review-button {
+    min-width: 105px;
+
+    height: 32px;
+
+    padding: 0 12px;
+
+    font-size: 9px;
+  }
+
+  /* COFFEE BEANS */
+  .reviews-beans {
+    width: 170px;
+  }
+
+  .reviews-beans-left {
+    top: 70px;
+    left: 10px;
+  }
+
+  .reviews-beans-right {
+    top: 83px;
+    right: -5px;
+  }
+}

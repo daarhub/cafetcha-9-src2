@@ -1,0 +1,531 @@
+/* =========================
+   HIGHLIGHTS SECTION
+========================= */
+
+.highlights {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #294f4d;
+}
+
+/* =========================
+   BACKGROUND IMAGE
+========================= */
+
+.highlights-bg {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 125%;
+
+  object-fit: cover;
+  object-position: center bottom;
+
+  z-index: 0;
+
+  pointer-events: none;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+/* =========================
+   CONTENT
+========================= */
+
+.highlights-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  /* move content slightly upward */
+  padding: 40px 5% 45px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.highlights-title {
+  width: min(700px, 92%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+
+.highlights-title h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+
+  line-height: 1;
+
+  text-align: center;
+}
+
+/* =========================
+   TITLE DECORATION
+========================= */
+
+.title-decoration {
+  width: 100%;
+
+  max-width: 500px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 13px;
+}
+
+.decoration-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #d8b77d;
+}
+
+.decoration-star {
+  color: #d8b77d;
+
+  font-size: 19px;
+
+  line-height: 1;
+}
+
+.bottom-decoration {
+  width: 390px;
+
+  margin-top: 14px;
+
+  margin-bottom: 0;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.highlight-slider {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1150px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+/* =========================
+   HIGHLIGHT CARD
+
+   ORIGINAL IMAGE:
+   1640 x 800
+
+   SAME RATIO:
+   1640 / 800
+========================= */
+
+.highlight-card {
+  position: relative;
+
+  display: block;
+
+  width: min(1000px, 86vw);
+
+  aspect-ratio: 1640 / 800;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #f7f0e7;
+
+  text-decoration: none;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+
+  cursor: pointer;
+
+  /* Lets the card work as a <button> too (login-required highlight) */
+
+  border: 0;
+
+  padding: 0;
+
+  font: inherit;
+}
+
+/* =========================
+   SLIDE IMAGE
+========================= */
+
+.highlight-slide-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.01);
+
+  transition:
+    opacity 0.55s ease,
+    transform 0.55s ease;
+
+  pointer-events: none;
+}
+
+.highlight-slide-image.active {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+/* =========================
+   SUBTLE HOVER
+========================= */
+
+.highlight-card:hover .highlight-slide-image.active {
+  transform: scale(1.015);
+}
+
+/* =========================
+   ARROWS
+========================= */
+
+.highlight-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(255, 255, 255, 0.85);
+
+  border-radius: 50%;
+
+  background: rgba(25, 58, 56, 0.65);
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.highlight-arrow:hover {
+  background: rgba(25, 58, 56, 0.95);
+
+  border-color: #d8b77d;
+
+  transform: translateY(-50%) scale(1.07);
+}
+
+.highlight-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+/* =========================
+   LEFT ARROW
+========================= */
+
+.highlight-arrow-left {
+  left: -65px;
+}
+
+/* =========================
+   RIGHT ARROW
+========================= */
+
+.highlight-arrow-right {
+  right: -65px;
+}
+
+/* =========================
+   DOTS
+========================= */
+
+.highlight-dots {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 20px;
+}
+
+.highlight-dot {
+  width: 8px;
+
+  height: 8px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+
+  transition:
+    width 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.highlight-dot:hover {
+  background: #ffffff;
+
+  transform: scale(1.15);
+}
+
+.highlight-dot.active {
+  width: 24px;
+
+  border-radius: 10px;
+
+  background: #d8b77d;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .highlights-content {
+    padding: 65px 6% 40px;
+  }
+
+  .highlights-title h2 {
+    font-size: 29px;
+  }
+
+  .highlight-card {
+    width: 80vw;
+  }
+
+  .highlight-slider {
+    max-width: 900px;
+  }
+
+  .highlight-arrow {
+    width: 42px;
+
+    height: 42px;
+  }
+
+  .highlight-arrow-left {
+    left: -35px;
+  }
+
+  .highlight-arrow-right {
+    right: -35px;
+  }
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 800px) {
+  .highlight-card {
+    width: 84vw;
+  }
+
+  .highlight-arrow-left {
+    left: -10px;
+  }
+
+  .highlight-arrow-right {
+    right: -10px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .highlights {
+    min-height: 100svh;
+  }
+
+  .highlights-bg {
+    height: 115%;
+
+    object-position: center bottom;
+  }
+
+  .highlights-content {
+    min-height: 100svh;
+
+    padding: 55px 4% 30px;
+  }
+
+  .highlights-title {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  .highlights-title h2 {
+    font-size: 21px;
+  }
+
+  .title-decoration {
+    width: 90%;
+
+    gap: 8px;
+  }
+
+  .bottom-decoration {
+    width: 70%;
+  }
+
+  .decoration-star {
+    font-size: 16px;
+  }
+
+  .highlight-card {
+    width: 88vw;
+
+    aspect-ratio: 1640 / 800;
+
+    border-radius: 9px;
+  }
+
+  .highlight-arrow {
+    width: 34px;
+
+    height: 34px;
+  }
+
+  .highlight-arrow-left {
+    left: -3px;
+  }
+
+  .highlight-arrow-right {
+    right: -3px;
+  }
+
+  .highlight-arrow svg {
+    width: 18px;
+
+    height: 18px;
+  }
+
+  .highlight-dots {
+    gap: 8px;
+
+    margin-top: 15px;
+  }
+
+  .highlight-dot {
+    width: 7px;
+
+    height: 7px;
+  }
+
+  .highlight-dot.active {
+    width: 21px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+  .highlights-content {
+    padding: 45px 3% 25px;
+  }
+
+  .highlights-title h2 {
+    font-size: 19px;
+  }
+
+  .highlight-card {
+    width: 90vw;
+  }
+
+  .highlight-arrow {
+    width: 30px;
+
+    height: 30px;
+  }
+
+  .highlight-arrow-left {
+    left: -2px;
+  }
+
+  .highlight-arrow-right {
+    right: -2px;
+  }
+}
